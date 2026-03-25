@@ -1,11 +1,10 @@
--- Задание 7.
+-- Этап 7. Выполнение SELECT к предагрегированным данным для целевого дашборда
 
 -- в качестве временных рамок используем сентябрь 2016
 select 
-	-- получаем маршрут, разделенный тире
+	-- маршрут, разделенный тире
 	concatWithSeparator(' - ', departure_airport, arrival_airport) AS route,
 	
-	-- не на всех шардах есть интересующие нас словари
     dictGet('nik_polovnikov.airports_dict', 'city', departure_airport) as dep_city ,
 	dictGet('nik_polovnikov.airports_dict', 'city', arrival_airport) as arr_city ,
 	ROUND(sum(ask), 0) AS total_ask,
@@ -25,6 +24,7 @@ select
 
 FROM flight_metrics
 
+-- в качестве временных рамок используем сентябрь 2016
 where departure_date >= '2016-09-01' and departure_date < '2016-10-01'
 GROUP BY
     route,
