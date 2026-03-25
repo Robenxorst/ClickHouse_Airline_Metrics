@@ -1,4 +1,4 @@
-# ClickHouse Flight Tickets
+# ClickHouse Data Pipeline for Airline Metrics
 Создание витрины данных на кластерах ClickHouse для расчета метрик авиаперелетов.
 
 ## Задание
