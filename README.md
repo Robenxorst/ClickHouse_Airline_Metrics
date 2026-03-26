@@ -143,7 +143,7 @@ Routes are categorized into: `Healthy`,  `Demand Issue`, `Pricing Issue`, `Poor`
 `Yield` ≥ 11;
 `Load Factor` ≥ 70%;
 
-## Performance and limitaions
+## 🚧 Performance and limitaions
 
 **Performance Considerations**:
 - minimized JOIN operations;
